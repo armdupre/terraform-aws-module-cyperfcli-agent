@@ -10,6 +10,12 @@ variable "AmiOwner" {
 	type = string
 }
 
+variable "Eth0PrivateIpAddress" {
+	default = "10.0.10.11"
+	description = "Private IP address associated with the first network interface"
+	type = string
+}
+
 variable "Eth0SecurityGroupId" {
 	description = "Id of the security group associated with first network interface"
 	type = string

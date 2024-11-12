@@ -38,6 +38,7 @@ resource "aws_network_interface" "Eth0" {
 	security_groups = [
 		local.Eth0SecurityGroupId
 	]
+	private_ips = [ local.Eth0PrivateIpAddress ]
 	tags = {
 		Name = local.Eth0Name
 		Owner = local.UserEmailTag
