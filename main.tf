@@ -16,6 +16,10 @@ resource "aws_instance" "Instance" {
 		network_interface_id = aws_network_interface.Eth0.id
 		device_index = "0"
 	}
+	network_interface {
+		network_interface_id = aws_network_interface.Eth1.id
+		device_index = "1"
+	}
 	root_block_device {
 		volume_size = local.InstanceEbsVolumeSize
 		delete_on_termination = local.InstanceEbsDeleteOnTermination
@@ -36,6 +40,21 @@ resource "aws_network_interface" "Eth0" {
 	]
 	tags = {
 		Name = local.Eth0Name
+		Owner = local.UserEmailTag
+		Project = local.UserProjectTag
+	}
+}
+
+resource "aws_network_interface" "Eth1" {
+	description = local.Eth1Name
+	source_dest_check = local.InterfaceSourceDestCheck
+	subnet_id = local.Eth1SubnetId
+	security_groups = [
+		local.Eth1SecurityGroupId
+	]
+	private_ips = local.Eth1PrivateIpAddresses
+	tags = {
+		Name = local.Eth1Name
 		Owner = local.UserEmailTag
 		Project = local.UserProjectTag
 	}

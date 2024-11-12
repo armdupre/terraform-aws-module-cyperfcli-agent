@@ -21,7 +21,7 @@ variable "Eth0SubnetId" {
 }
 
 variable "InstanceId" {
-	default = "app"
+	default = "agent"
 	description = "Id of the instance of this module that ensures uniqueness"
 	type = string
 }
@@ -70,7 +70,7 @@ variable "SshKeyName" {
 }
 
 variable "Tag" {
-	default = "keng"
+	default = "cyperfcli"
 	description = "App ID tag of application using the deployment"
 	type = string
 }
