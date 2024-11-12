@@ -20,6 +20,22 @@ variable "Eth0SubnetId" {
 	type = string
 }
 
+variable "Eth1PrivateIpAddresses" {
+	default = [ "10.0.2.12" ]
+	description = "List of IP addresses associated with the second network interface"
+	type = list(string)
+}
+
+variable "Eth1SecurityGroupId" {
+	description = "Id of the security group associated with second network interface"
+	type = string
+}
+
+variable "Eth1SubnetId" {
+	description = "Id of the subnet associated with the second network interface"
+	type = string
+}
+
 variable "InstanceId" {
 	default = "agent"
 	description = "Id of the instance of this module that ensures uniqueness"
