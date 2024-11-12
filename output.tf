@@ -14,6 +14,13 @@ output "Eth0" {
 	}
 }
 
+output "Eth1" {
+	description = "Ethernet resource associated with the second network interface."
+	value = {
+		"id" : aws_network_interface.Eth1.id
+	}
+}
+
 output "IamRole" {
 	description = "Role resource associated with the EC2 instance."
 	value = {
