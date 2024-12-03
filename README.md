@@ -9,7 +9,7 @@ This module creates a single instance having two network interfaces.
 ## Usage
 ```tf
 module "Agent" {
-	source  = "armdupre/module-cyperfcli-agent/aws"
+	source  = "git::https://github.com/armdupre/terraform-aws-module-cyperfcli-agent.git"
 	Eth0SecurityGroupId = aws_security_group.PublicSecurityGroup.id
 	Eth0SubnetId = aws_subnet.PublicSubnet.id
 	Eth1SecurityGroupId = aws_security_group.PrivateSecurityGroup.id
