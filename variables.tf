@@ -1,11 +1,11 @@
 variable "AmiName" {
-	default = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20250516-47489723-7305-4e22-8b22-b0d57054f216"
+	default = "ubuntu-pro-server/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-pro-server-20250325"
 	description = "AMI name used for deploying instances"
 	type = string
 }
 
 variable "AmiOwner" {
-	default = "679593333241"
+	default = "099720109477"
 	description = "Owner of AMI used for deploying instances"
 	type = string
 }
