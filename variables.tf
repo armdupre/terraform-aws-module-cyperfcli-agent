@@ -1,5 +1,5 @@
 variable "AmiName" {
-	default = "ubuntu-pro-server/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-pro-server-20250325"
+	default = "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20250610"
 	description = "AMI name used for deploying instances"
 	type = string
 }
