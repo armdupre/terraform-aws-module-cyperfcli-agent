@@ -14,7 +14,7 @@ locals {
 	IamRoleName = "${local.Preamble}-iam-role-${local.Region}"
 	InstanceDisableApiTermination = false
 	InstanceEbsDeleteOnTermination = true
-	InstanceEbsVolumeSize = "32"
+	InstanceEbsVolumeSize = var.InstanceEbsVolumeSize
 	InstanceEbsVolumeType = "gp2"
 	InstanceId = var.InstanceId
 	InstanceInstanceInitiatedShutdownBehavior = "stop"

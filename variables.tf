@@ -42,6 +42,13 @@ variable "Eth1SubnetId" {
 	type = string
 }
 
+variable "InstanceEbsVolumeSize" {
+	default = 96
+	description = "Size of the image when expanded"
+	type = number
+}
+
+
 variable "InstanceId" {
 	default = "agent"
 	description = "Id of the instance of this module that ensures uniqueness"
