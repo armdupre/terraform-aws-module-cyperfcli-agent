@@ -11,7 +11,7 @@ resource "aws_instance" "Instance" {
 		Owner = local.UserEmailTag
 		Project = local.UserProjectTag
 	}
-	user_data = local.init_cli
+	user_data_base64 = local.init_cli
 	network_interface {
 		network_interface_id = aws_network_interface.Eth0.id
 		device_index = "0"
