@@ -1,5 +1,5 @@
 variable "AmiName" {
-	default = "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20250610"
+	default = "Ubuntu Server 24.04 LTS (HVM), SSD Volume Type"
 	description = "AMI name used for deploying instances"
 	type = string
 }
